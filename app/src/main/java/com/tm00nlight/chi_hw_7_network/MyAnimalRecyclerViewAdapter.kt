@@ -32,7 +32,6 @@ class MyAnimalRecyclerViewAdapter(
         holder.name.text = item.name
         holder.altName.text = item.latin_name
         holder.type.text = item.animal_type
-            //holder.img.setImageURI(Uri.parse(item.image_link))
         Picasso.get().load(item.image_link).into(holder.img)
     }
 
@@ -46,10 +45,6 @@ class MyAnimalRecyclerViewAdapter(
 
         override fun toString(): String {
             return super.toString() + " '" + name.text + "'"
-        }
-
-        fun bindImage(url: String) {
-
         }
     }
 
