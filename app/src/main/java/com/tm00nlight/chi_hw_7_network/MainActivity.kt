@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                 if (supportFragmentManager.findFragmentByTag("ANIMALS") != null) {
                     supportFragmentManager
                         .beginTransaction()
-                        .replace(binding.container.id, MarvelFragment())
+                        .replace(binding.container.id, MarvelFragment(), "MARVEL")
                         .commit()
                 } else {
                     supportFragmentManager
