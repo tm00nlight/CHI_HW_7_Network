@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.squareup.picasso.Picasso
 
 import com.tm00nlight.chi_hw_7_network.data.Marvel
 import com.tm00nlight.chi_hw_7_network.databinding.FragmentMarvelBinding
@@ -29,6 +30,7 @@ class MyMarvelRecyclerViewAdapter(
         val item = values[position]
         holder.name.text = item.name
         holder.altName.text = item.realname
+        Picasso.get().load(item.imageurl).into(holder.img)
     }
 
     override fun getItemCount(): Int = values.size

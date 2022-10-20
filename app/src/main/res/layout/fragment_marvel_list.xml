@@ -6,8 +6,8 @@
     android:name="com.tm00nlight.chi_hw_7_network.MarvelFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
+    android:padding="4dp"
+    android:background="#030629"
     app:layoutManager="LinearLayoutManager"
     tools:context=".MarvelFragment"
     tools:listitem="@layout/fragment_marvel" />

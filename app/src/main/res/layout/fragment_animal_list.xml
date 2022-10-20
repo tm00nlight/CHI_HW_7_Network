@@ -6,8 +6,7 @@
     android:name="com.tm00nlight.chi_hw_7_network.AnimalFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
     tools:context=".AnimalFragment"
+    android:background="@color/light_green"
     tools:listitem="@layout/fragment_animal" />

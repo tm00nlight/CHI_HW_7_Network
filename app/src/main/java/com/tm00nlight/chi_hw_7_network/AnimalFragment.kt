@@ -21,7 +21,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class AnimalFragment : Fragment() {
-
+    val TAG = "ANIMAL"
     private var columnCount = 1
 
     var animals: MutableList<Animal> = mutableListOf()
@@ -81,8 +81,7 @@ class AnimalFragment : Fragment() {
         if (result.isSuccessful) {
             animals += result.body()!!
         }
-
-        Log.d("Retrofit(in Fragment)", "$animals")
+        Log.d("Retrofit", "$animals")
     }
 
     private fun updateUI(view: View, animals: MutableList<Animal>) {
