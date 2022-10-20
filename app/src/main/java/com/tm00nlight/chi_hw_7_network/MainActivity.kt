@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager
             .beginTransaction()
-            .replace(binding.container.id, AnimalFragment())
+            .replace(binding.container.id, AnimalFragment(), "ANIMALS")
             .commit()
     }
 
@@ -34,18 +34,17 @@ class MainActivity : AppCompatActivity() {
         // Handle item selection
         return when (item.itemId) {
             R.id.switcher -> {
-                if (supportFragmentManager.findFragmentByTag("ANIMAL") == null) {
+                if (supportFragmentManager.findFragmentByTag("ANIMALS") != null) {
                     supportFragmentManager
                         .beginTransaction()
                         .replace(binding.container.id, MarvelFragment())
                         .commit()
+                } else {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(binding.container.id, AnimalFragment(), "ANIMALS")
+                        .commit()
                 }
-//                if (supportFragmentManager.findFragmentByTag("MARVEL") == null) {
-//                    supportFragmentManager
-//                        .beginTransaction()
-//                        .replace(binding.container.id, AnimalFragment())
-//                        .commit()
-//                }
 
                 true
             }

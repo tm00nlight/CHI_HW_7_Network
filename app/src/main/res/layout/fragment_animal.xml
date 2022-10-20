@@ -7,23 +7,23 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
-        android:padding="2dp"
-        android:gravity="center">
+        android:padding="2dp">
 
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textAppearance="?attr/textAppearanceListItem" />
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/alt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="italic"
-            android:textAppearance="?attr/textAppearanceListItem" />
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/type"
@@ -33,10 +33,10 @@
 
         <ImageView
             android:id="@+id/image"
-            android:scaleType="fitCenter"
-            android:layout_margin="2dp"
             android:layout_width="wrap_content"
-            android:layout_height="200dp" />
+            android:layout_height="200dp"
+            android:layout_margin="2dp"
+            android:scaleType="fitCenter" />
 
     </LinearLayout>
 

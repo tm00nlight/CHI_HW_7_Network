@@ -19,8 +19,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MarvelFragment : Fragment() {
-    val TAG = "MARVEL"
-    private var columnCount = 1
 
     var heroes: MutableList<Marvel> = mutableListOf()
 
@@ -33,10 +31,7 @@ class MarvelFragment : Fragment() {
         // Set the adapter
         if (view is RecyclerView) {
             with(view) {
-                layoutManager = when {
-                    columnCount <= 1 -> LinearLayoutManager(context)
-                    else -> GridLayoutManager(context, columnCount)
-                }
+                layoutManager = LinearLayoutManager(context)
                 adapter = MyMarvelRecyclerViewAdapter(listOf())
             }
         }

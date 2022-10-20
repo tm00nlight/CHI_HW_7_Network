@@ -21,8 +21,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class AnimalFragment : Fragment() {
-    val TAG = "ANIMAL"
-    private var columnCount = 1
 
     var animals: MutableList<Animal> = mutableListOf()
 
@@ -35,10 +33,7 @@ class AnimalFragment : Fragment() {
         // Set the adapter
         if (view is RecyclerView) {
             with(view) {
-                layoutManager = when {
-                    columnCount <= 1 -> LinearLayoutManager(context)
-                    else -> GridLayoutManager(context, columnCount)
-                }
+                layoutManager = LinearLayoutManager(context)
                 adapter = MyAnimalRecyclerViewAdapter(listOf())
             }
         }
